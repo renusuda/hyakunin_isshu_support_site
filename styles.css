@@ -1,0 +1,169 @@
+/* 色はアプリのテーマ（lib/src/theme/app_colors.dart）に合わせる */
+:root {
+  --paper: #f8f5ee;
+  --ink: #2a2622;
+  --muted: #6b635a;
+  --line: #d3c9b8;
+  --accent: #274a78;
+  --accent-soft: #dde5ef;
+}
+
+/* 全体のスタイル */
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic',
+    'Meiryo', sans-serif;
+  line-height: 1.8;
+  color: var(--ink);
+  background-color: var(--paper);
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダー */
+header {
+  background-color: var(--accent);
+  padding: 1rem;
+}
+
+header h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.sp-only {
+  display: none;
+}
+
+/* ページ内リンク */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1.25rem;
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+section {
+  scroll-margin-top: 1rem;
+}
+
+/* コンテンツ */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+main h2 {
+  font-size: 1.25rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+main h3 {
+  font-size: 1.05rem;
+  margin-top: 1.75rem;
+}
+
+main h4 {
+  font-size: 1rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* 歌の状態の札（アプリと同じ色） */
+.chip {
+  display: inline-block;
+  padding: 0 0.6em;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.chip-new {
+  background-color: #fff;
+}
+
+.chip-learning {
+  background-color: #f2e6cb;
+  color: #85560f;
+}
+
+.chip-learned {
+  background-color: #dfe9dd;
+  color: #2f6b4a;
+}
+
+a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+/* 外部送信の表 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+th,
+td {
+  border: 1px solid var(--line);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  width: 9em;
+  background-color: var(--accent-soft);
+  font-weight: normal;
+}
+
+.contact-email {
+  font-weight: bold;
+}
+
+.dates {
+  margin-top: 2.5rem;
+  text-align: right;
+  color: var(--muted);
+}
+
+/* フッター */
+footer {
+  background-color: #e9e3d6;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+  .sp-only {
+    display: inline;
+  }
+
+  th,
+  td {
+    display: block;
+    width: auto;
+  }
+
+  td {
+    border-top: none;
+  }
+}
